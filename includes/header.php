@@ -23,7 +23,7 @@ session_start()
             <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="staffInformation.php">Nhân viên</a>
+            <a class="nav-link" href="index-staffs.php">Nhân viên</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="timkiemtheophongban.php">Tìm kiếm phòng ban</a>
