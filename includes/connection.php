@@ -1,11 +1,15 @@
 <?php
-
-$server_name     = "root";
-$server_password = "";
-$server_host     = "localhost";
-$database = "thicuoiki";
-
-$connect = mysqli_connect($server_host, $server_name, $server_password, $database)
- or die("Cannot connect to database :".mysqli_connect_error());
-
+    function ConnectDatabase($query)
+    {
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $connection = mysqli_connect($servername, $username, $password);
+        if (!$connection)
+        {
+            die("Connection failed: " .mysqli_connect_error());
+        } 
+        mysqli_select_db($connection, "thicuoiki");
+        return mysqli_query($connection, $query);
+    }
 ?>
