@@ -3,7 +3,7 @@
    <head>
       <title>Quản Lí Phòng Ban </title> 
       <link rel="stylesheet" href="styles/css/bootstrap.min.css">
-      <script src="styles/js/back_search.js"></script>
+      <link rel="stylesheet" href="styles/css/styles.css">
    </head>
    <body>
 
