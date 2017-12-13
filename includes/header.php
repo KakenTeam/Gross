@@ -7,6 +7,7 @@ session_start()
       <title>Quản Lí Phòng Ban </title> 
       <link rel="stylesheet" href="styles/css/bootstrap.min.css">
       <link rel="stylesheet" href="styles/css/styles.css">
+      <meta charset="UTF-8">
    </head>
    <body>
 
@@ -22,7 +23,7 @@ session_start()
             <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="xemthongtin.php">Nhân viên</a>
+            <a class="nav-link" href="index-staffs.php">Nhân viên</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="timkiemtheophongban.php">Tìm kiếm phòng ban</a>
