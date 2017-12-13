@@ -1,6 +1,5 @@
 <?php
 session_start();
-session_destroy();
 ?>
 
 <!DOCTYPE html>
@@ -55,7 +54,7 @@ session_destroy();
         $password = addslashes($password);
 
         $sql = "SELECT * FROM user WHERE username='$username' and password='$password'";
-        $query = mysqli_query($connect, $sql);
+        $query = ConnectDatabase($sql);
         $num_row = mysqli_num_rows($query);
 
         if ($num_row == 0) {

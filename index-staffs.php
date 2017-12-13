@@ -1,7 +1,7 @@
 <?php include ('includes/header.php') ?>
 <h3 class="text-center">Staffs list </h3>
-<table class = "table">
-    <tr>
+<table class = "table table-hover table-bordered">
+    <tr class="thead-light">
         <th>Id</th>
         <th>Name</th>
         <th>Address</th>
