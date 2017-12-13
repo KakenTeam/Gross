@@ -59,7 +59,9 @@ session_destroy();
         $num_row = mysqli_num_rows($query);
 
         if ($num_row == 0) {
-          echo "Invalid login credentials. Please try again!";
+          echo '<script language="javascript">';
+          echo 'alert("Invalid login credentials. Please try again!")';
+          echo '</script>';
         } else {
 
           while ($data = mysqli_fetch_array($query)) {
