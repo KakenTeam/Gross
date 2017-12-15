@@ -26,8 +26,8 @@ session_start()
             <a class="nav-link" href="index-staffs.php">Nhân viên</a>
           </li>
         </ul>
-        <form action="searchResults.php" class="form-inline my-2 my-lg-0" name="searchForm">
-          <?php $seachString = $_REQUEST["txtSearch"]; ?>
+        <form action="index-staffs.php" class="form-inline my-2 my-lg-0" name="searchForm">
+          <?php $seachString = isset($_REQUEST["txtSearch"]) ? $_REQUEST["txtSearch"] : ""?>
           <input class="form-control mr-sm-2" type="text" placeholder="Tên nhân viên" name="txtSearch" value=<?php echo $seachString;?>>
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
         </form>   

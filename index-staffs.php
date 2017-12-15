@@ -10,8 +10,17 @@
     </tr>
     <?php
         require ('includes/connection.php');
-        $query = "SELECT staff.Id, staff.Name, staff.Address, staff.Email, position.Name as Position
+        if (isset($_REQUEST["txtSearch"]))
+        {
+            $query = "SELECT staff.Id, staff.Name, staff.Address, staff.Email, position.Name as Position
+                    FROM staff INNER JOIN position ON staff.positionId = position.Id 
+                    WHERE staff.Name LIKE '%".$seachString."%'";
+        }
+        else 
+        {
+            $query = "SELECT staff.Id, staff.Name, staff.Address, staff.Email, position.Name as Position
                     FROM staff INNER JOIN position ON staff.positionId = position.Id";
+        }
         $data = ConnectDatabase($query);
         $count = mysqli_num_rows($data); 
         while ($row = mysqli_fetch_assoc($data))
