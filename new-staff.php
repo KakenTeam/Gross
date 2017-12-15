@@ -2,7 +2,7 @@
 
 <h3 class="text-center">Thêm nhân viên mới</h3>
 
-<form action="new-staff.php" method="POST">
+<form action="new-staff.php" method="POST" class="col-md-6 offset-md-3">
 
   <div class="form-group">
     <label for="name-staff">Tên nhân viên: </label>
