@@ -1,5 +1,8 @@
 <?php include ('includes/header.php') ?>
 <h3 class="text-center">Staffs list </h3>
+
+<button type="button" class="btn btn-primary" onClick="document.location.href='new-staff.php'">Thêm nhân viên</button>
+
 <table class = "table table-hover table-bordered">
     <tr class="thead-light">
         <th>Id</th>
