@@ -35,8 +35,15 @@ session_start()
 
         </ul>
         <?php 
-          if ($_SESSION["user_id"]) {
+          if (isset($_SESSION["user_id"])) {
             echo '<span class="username">Hi, '.$_SESSION["username"]."</span>";
+          ?>
+            <button class="btn btn-primary" onClick="document.location.href='login.php'">Log out</button>
+        <?php 
+          } else { ?>
+
+            <button class="btn btn-primary" onClick="document.location.href='login.php'">Log in</button>
+        <?php
           }
         ?>
       </div>
