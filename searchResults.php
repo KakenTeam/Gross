@@ -10,8 +10,11 @@
     </tr>
     <?php
         require ('includes/connection.php');
+        $seachString = $_REQUEST["txtSearch"];
+        
         $query = "SELECT staff.Id, staff.Name, staff.Address, staff.Email, position.Name as Position
-                    FROM staff INNER JOIN position ON staff.positionId = position.Id";
+                    FROM staff INNER JOIN position ON staff.positionId = position.Id 
+                    WHERE staff.Name LIKE '%".$seachString."%'";
         $data = ConnectDatabase($query);
         $count = mysqli_num_rows($data); 
         while ($row = mysqli_fetch_assoc($data))
@@ -25,5 +28,6 @@
             </tr>";
         }
     ?>
+    
 </table>
 <?php include("includes/footer.php") ?>
