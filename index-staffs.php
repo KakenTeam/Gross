@@ -20,21 +20,44 @@
         $count = mysqli_num_rows($data); 
         while ($row = mysqli_fetch_assoc($data))
         {
-            echo "<tr>
+            ?>
+            <tr id="rowStaff<?php echo $row{'Id'} ?>">
+            <?php
+            echo "
             <td>".$row{"Id"}."</td>
             <td>".$row{"Name"}."</td>
             <td>".$row{"Address"}."</td>
             <td>".$row{"Email"}."</td>
             <td>".$row{"Position"}."</td>"
         ?>
-            <td><button class="btn btn-info"  onClick="document.location.href='update-staff.php?Id=<?php echo $row{"Id"}; ?>'">Chỉnh sửa</button></td>
+            <td>
+                <button class="btn btn-info"  onClick="document.location.href='update-staff.php?Id=<?php echo $row{"Id"}; ?>'">Chỉnh sửa</button>
+                <button 
+                    class="btn btn-danger"
+                    data-toggle="modal" 
+                    data-target="#deleteModal" 
+                    data-staff-id="<?php echo $row{"Id"} ?>"
+                    data-staff-name="<?php echo $row{"Name"} ?>">Xóa</button>
+            </td>
             </tr>
         <?php
         }
     ?>
 </table>
 
-<script>
- 
-</script>
+
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy bỏ</button>
+        <button type="button" class="btn btn-primary" id="delete-staff-btn" >Xóa</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <?php include("includes/footer.php") ?>
