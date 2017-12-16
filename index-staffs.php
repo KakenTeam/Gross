@@ -7,6 +7,9 @@
         <th>Địa chỉ</th>
         <th>Email</th>
         <th>Chức vụ</th>
+        <?php if (isset($_SESSION["user_id"])) {?>
+        <th>Thao tác</th>
+        <?php } ?>
     </tr>
     <?php
         require ('includes/connection.php');
@@ -30,8 +33,15 @@
             <td>".$row{"Name"}."</td>
             <td>".$row{"Address"}."</td>
             <td>".$row{"Email"}."</td>
-            <td>".$row{"Position"}."</td>
-            </tr>";
+            <td>".$row{"Position"}."</td>";
+            if (isset($_SESSION["user_id"])) {?>
+            <td>
+                <button class="btn" type="button">Chỉnh sửa</button>
+                <button class="btn" type="button">Xóa</button>
+            </td>
+            <?php
+            }
+            "</tr>";
         }
     ?>
 </table>

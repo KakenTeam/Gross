@@ -32,7 +32,7 @@ session_start()
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
         </form>   
         <?php 
-          if ($_SESSION["user_id"]) {
+          if (isset($_SESSION["user_id"])) {
             echo '<span class="username">Hi, '.$_SESSION["username"]."</span>";
           }
         ?>
