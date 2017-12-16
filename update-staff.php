@@ -72,7 +72,7 @@
 
     $data = ConnectDatabase($query);
 
-    header('Location: http://localhost/Gross/index-staffs.php');
+    header('Location: index-staffs.php');
   }
 ?>
 
