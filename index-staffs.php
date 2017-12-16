@@ -1,7 +1,9 @@
 <?php include ('includes/header.php') ?>
 <h3 class="text-center">Danh sách nhân viên</h3>
 
+<?php if (isset($_SESSION["user_id"])) {?>
 <button type="button" class="btn btn-primary" onClick="document.location.href='new-staff.php'">Thêm nhân viên</button>
+<?php } ?>
 
 <table class = "table table-hover table-bordered">
     <tr class="thead-light">
