@@ -2,7 +2,9 @@
 <h3 class="text-center">Danh sách nhân viên</h3>
 
 <?php if (isset($_SESSION["user_id"])) {?>
-<button type="button" class="btn btn-primary" onClick="document.location.href='new-staff.php'">Thêm nhân viên</button>
+    <button 
+        type="button" class="btn btn-primary pointer btn-add-staff" 
+        onClick="document.location.href='new-staff.php'">Thêm nhân viên</button>
 <?php } ?>
 
 <table class = "table table-hover table-bordered">
@@ -45,9 +47,9 @@
                 ?>
                 <?php if (isset($_SESSION["user_id"])) {?>
                 <td>
-                    <button class="btn btn-info"  onClick="document.location.href='update-staff.php?Id=<?php echo $row{"Id"}; ?>'">Chỉnh sửa</button>
+                    <button class="btn btn-info pointer"  onClick="document.location.href='update-staff.php?Id=<?php echo $row{"Id"}; ?>'">Chỉnh sửa</button>
                     <button 
-                        class="btn btn-danger"
+                        class="btn btn-danger pointer"
                         data-toggle="modal" 
                         data-target="#deleteModal" 
                         data-staff-id="<?php echo $row{"Id"} ?>"
@@ -68,8 +70,8 @@
         
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy bỏ</button>
-        <button type="button" class="btn btn-primary" id="delete-staff-btn" >Xóa</button>
+        <button type="button" class="btn btn-secondary pointer" data-dismiss="modal">Hủy bỏ</button>
+        <button type="button" class="btn btn-primary pointer" id="delete-staff-btn" >Xóa</button>
       </div>
     </div>
   </div>

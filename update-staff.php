@@ -55,7 +55,7 @@
             </select>
           </div>
 
-          <button type="submit" class="btn btn-primary" name="btn-update-staff">Cập nhật</button>
+          <button type="submit" class="btn btn-primary pointer" name="btn-update-staff">Cập nhật</button>
         </form>
       <?php
       }

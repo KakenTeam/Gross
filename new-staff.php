@@ -1,6 +1,6 @@
 <?php 
-  require ('includes/permission.php');
-  include ('includes/header.php'); ?>
+  include ('includes/header.php');
+  require ('includes/permission.php'); ?>
 
 <h3 class="text-center">Thêm nhân viên mới</h3>
 
@@ -38,7 +38,7 @@
     </select>
   </div>
 
-  <button type="submit" class="btn btn-primary" name="btn-add-staff">Thêm nhân viên</button>
+  <button type="submit" class="btn btn-primary pointer" name="btn-add-staff">Thêm nhân viên</button>
 </form>
 
 <?php 

@@ -33,7 +33,7 @@ session_unset();
           </div>
         </div>
 
-        <button class="btn btn-primary " name="btn-sign-in" type="submit">Sign in</button>
+        <button class="btn btn-primary pointer" name="btn-sign-in" type="submit">Sign in</button>
       </form>
 
     </div>

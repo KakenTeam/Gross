@@ -11,3 +11,23 @@
 .username {
     color: white;
 }
+
+.pointer {
+    cursor: pointer;
+}
+
+.center-form-nav {
+    margin-right: 100px;
+}
+
+.form-search-nav {
+    width: 400px;
+}
+
+.btn-log {
+    margin-left: 12px;
+}
+
+.btn-add-staff {
+    margin-bottom: 12px;
+}

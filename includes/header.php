@@ -27,20 +27,22 @@ ob_start();
             <a class="nav-link" href="index-staffs.php">Nhân viên</a>
           </li>
         </ul>
-        <form action="index-staffs.php" class="form-inline my-2 my-lg-0" name="searchForm">
+        <form action="index-staffs.php" class="form-inline my-2 my-lg-0 center-form-nav" name="searchForm">
           <?php $seachString = isset($_REQUEST["txtSearch"]) ? $_REQUEST["txtSearch"] : ""?>
-          <input class="form-control mr-sm-2" type="text" placeholder="Tên nhân viên" name="txtSearch" value=<?php echo $seachString;?>>
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
+          <input 
+            class="form-control mr-sm-2" type="text" placeholder="Nhập tên nhân viên" name="txtSearch" value="<?php echo $seachString;?>"
+            style="width: 400px; ">
+          <button class="btn btn-outline-success my-2 my-sm-0 pointer" type="submit">Tìm kiếm</button>
         </form>   
         <?php 
           if (isset($_SESSION["user_id"])) {
             echo '<span class="username">Hi, '.$_SESSION["username"]."</span>";
           ?>
-            <button class="btn btn-primary" onClick="document.location.href='login.php'">Log out</button>
+            <button class="btn btn-primary pointer btn-log" onClick="document.location.href='login.php'">Log out</button>
         <?php 
           } else { ?>
 
-            <button class="btn btn-primary" onClick="document.location.href='login.php'">Log in</button>
+            <button class="btn btn-primary pointer btn-log" onClick="document.location.href='login.php'">Log in</button>
         <?php
           }
         ?>
