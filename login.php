@@ -1,8 +1,9 @@
+
 <?php
-session_unset(); 
-
+session_start();
+if (!empty($_SESSION['user_id'])) session_unset($_SESSION['user_id']); 
+session_write_close();
 ?>
-
 <?php include ('includes/header.php') ?>
       <form 
         class="col-md-6 offset-md-3"
