@@ -1,5 +1,6 @@
 <?php include ('includes/header.php') ?>
 <h3 class="text-center">Danh sách nhân viên</h3>
+<button type="button" class="btn btn-primary" onClick="document.location.href='new-staff.php'">Thêm nhân viên</button>
 <table class = "table table-hover table-bordered">
     <tr class="thead-light">
         <th>Id</th>
@@ -28,7 +29,10 @@
         $count = mysqli_num_rows($data); 
         while ($row = mysqli_fetch_assoc($data))
         {
-            echo "<tr>
+            ?>
+            <tr id="rowStaff<?php echo $row{'Id'} ?>">
+            <?php
+            echo "
             <td>".$row{"Id"}."</td>
             <td>".$row{"Name"}."</td>
             <td>".$row{"Address"}."</td>
@@ -36,13 +40,34 @@
             <td>".$row{"Position"}."</td>";
             if (isset($_SESSION["user_id"])) {?>
             <td>
-                <button class="btn" type="button">Chỉnh sửa</button>
-                <button class="btn" type="button">Xóa</button>
+                <button class="btn btn-info"  onClick="document.location.href='update-staff.php?Id=<?php echo $row{"Id"}; ?>'">Chỉnh sửa</button>
+                <button 
+                    class="btn btn-danger"
+                    data-toggle="modal" 
+                    data-target="#deleteModal" 
+                    data-staff-id="<?php echo $row{"Id"} ?>"
+                    data-staff-name="<?php echo $row{"Name"} ?>">Xóa</button>
             </td>
+            <?php } ?>
+            </tr>
             <?php
-            }
-            "</tr>";
         }
     ?>
 </table>
+
+
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy bỏ</button>
+        <button type="button" class="btn btn-primary" id="delete-staff-btn" >Xóa</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <?php include("includes/footer.php") ?>
