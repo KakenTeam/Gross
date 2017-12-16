@@ -3,6 +3,7 @@
 <h3 class="text-center">Cập nhật thông tin</h3>
 
 <?php 
+  require ('includes/permission.php');
     if (isset($_GET["Id"])) {
       require ('includes/connection.php');
       $IdStaff = $_GET["Id"];

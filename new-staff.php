@@ -1,4 +1,6 @@
-<?php include ('includes/header.php') ?>
+<?php 
+  require ('includes/permission.php');
+  include ('includes/header.php'); ?>
 
 <h3 class="text-center">Thêm nhân viên mới</h3>
 

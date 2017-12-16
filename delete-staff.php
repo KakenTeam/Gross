@@ -1,4 +1,5 @@
 <?php 
+  require ('includes/permission.php');
   if (isset($_POST["StaffId"])) {
     require ('includes/connection.php');
     $staffId = $_POST["StaffId"];
