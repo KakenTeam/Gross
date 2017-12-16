@@ -1,19 +1,11 @@
 <?php
-session_start();
 session_unset(); 
 
 ?>
 
-<!DOCTYPE html>
-<html>
-   <head>
-      <title>Quản Lí Phòng Ban </title> 
-      <link rel="stylesheet" href="styles/css/bootstrap.min.css">
-      <link rel="stylesheet" href="styles/css/styles.css">
-   </head>
-   <body>
-    <div class="container">
+<?php include ('includes/header.php') ?>
       <form 
+        class="col-md-6 offset-md-3"
         method="POST"
         action="login.php"
         class="form-signin">
@@ -35,10 +27,6 @@ session_unset();
 
         <button class="btn btn-primary pointer" name="btn-sign-in" type="submit">Sign in</button>
       </form>
-
-    </div>
-
-
     <?php 
       // connect to database
       require_once("includes/connection.php");
@@ -75,5 +63,4 @@ session_unset();
 
       }
     ?>
-  </body>
-</html>
+<?php include("includes/footer.php") ?>
